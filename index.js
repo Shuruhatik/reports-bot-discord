@@ -5,6 +5,9 @@ const Dataa = require('st.db');
 const db = new Dataa(`/Datas/reports-data.json`);
 const randomstring = require("randomstring");
 const config = require(`./config.json`)
+const app = require('express')();
+app.get('/', (req, res) => res.send('shuruhatik.xyz'));
+app.listen(3000)
 const disbut = require('discord-buttons');
 disbut(client);
 
