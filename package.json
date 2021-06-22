@@ -1,0 +1,19 @@
+{
+  "name": "reports-bot-discord",
+  "version": "1.0.0",
+  "description": "**How to use [ English ]** Create a file named `.env` Put the following in it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache",
+  "dependencies": {
+    "discord-buttons": "^3.2.1",
+    "discord-reply": "^0.1.2",
+    "discord.js": "^12.5.3",
+    "randomstring": "^1.2.1",
+    "st.db": "^2.0.0"
+  }
+}
