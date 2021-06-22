@@ -3,7 +3,6 @@ const client = new Discord.Client();
 require('discord-reply');
 const Dataa = require('st.db');
 const db = new Dataa(`/Datas/reports-data.json`);
-const replysdb = new Dataa('/Datas/replys.json');
 const randomstring = require("randomstring");
 const config = require(`./config.json`)
 const disbut = require('discord-buttons');
