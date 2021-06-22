@@ -14,7 +14,7 @@ client.on("messageReactionAdd", async (reaction, user) => {
     if(reaction.message.channel.id != config.onlyChannel) return;
   }
   let message = reaction.message, emoji = reaction.emoji;
-  if (emoji.name == '😡' || emoji.name == '😈') {
+  if (emoji.name == config.emoji_1 || emoji.name == config.emoji_2) {
     reaction.remove(user);
     let embed = new Discord.MessageEmbed()
       .setDescription(`Do you want to follow up and submit the **report**?\nهل تريد المتابعة وتقديم **الأبلاغ**؟`)
@@ -62,7 +62,7 @@ client.on("messageReactionAdd", async (reaction, user) => {
         })
         msg.edit({embed:accept_embed})
         await button.reply.send(`🙂 Thank you for your **report**!\n\n> [Go to the message on which the report was submitted](https://discord.com/channels/${reaction.message.channel.guild.id}/${reaction.message.channel.id}/${reaction.message.id})`, true);
-        client.channels.cache.get(config.logchannel).send({ embed: accept_embed })///All Copy Right Reserved For: Shuruhatik  in YT
+        client.channels.cache.get(config.logchannel).send({ embed: accept_embed }).catch(err => console.log(`channel log error`))///All Copy Right Reserved For: Shuruhatik  in YT
       }
     })
   }
@@ -71,7 +71,7 @@ client.on("messageReactionAdd", async (reaction, user) => {
 client.on("ready", async () => {
   await client.user.setActivity(config.status || `Bot Created by Shuruhatik.yxz`)
   console.clear()
-  console.log(`\u001b[38;5;220m------- Reports bot by Shuruhatik.xyz -------\n\u001b[38;5;220m> \x1b[32mVersion: \x1b[37m1.0\n\u001b[38;5;220m> \x1b[32mBot Status: \x1b[37m\x1b[7mONLINE\x1b[0m\n\u001b[38;5;220m------- Reports bot by Shuruhatik.xyz -------\x1b[37m\n\x1b[44mCopyrights:\x1b[0m  \x1b[4mAll Copyrights To https://www.shuruhatik.xyz/!\x1b[0m \u001b[0m`);
+  console.log(`\u001b[38;5;220m------- ﺩﺭﻮﻜﺴﻳﺪﻠﻟ ﻞﺋﺎﺳﺭ ﻦﻋ ﻍﻼﺑﻹﺍ ﻡﺎﻈﻧ ﺕﻮﺑ -------\n\u001b[38;5;220m> \x1b[32mﺭﺍﺪﺻﺇ: \x1b[37m1.0\n\u001b[38;5;220m> \x1b[32mﺕﻮﺒﻟﺍ ﺔﻟﺎﺣ: \x1b[37m\x1b[7mﻞﺼﺘﻣ\x1b[0m\n\u001b[38;5;220m------- ﺩﺭﻮﻜﺴﻳﺪﻠﻟ ﻞﺋﺎﺳﺭ ﻦﻋ ﻍﻼﺑﻹﺍ ﻡﺎﻈﻧ ﺕﻮﺑ -------\x1b[37m\n\x1b[44mﺮﺸﻨﻟﺍﻭ ﻒﻴﻟﺄﺘﻟﺍ ﻕﻮﻘﺣ:\x1b[0m  \x1b[4mﻰﻟﺇ ﺮﺸﻨﻟﺍ ﻕﻮﻘﺣ ﻊﻴﻤﺟ https://www.shuruhatik.xyz/\x1b[0m \u001b[0m`);
 })
 
 ///All Copy Right Reserved For: Shuruhatik  in YT
