@@ -1,5 +1,7 @@
 {
   "status": "حالة البوت للي تبيه",
+  "emoji_1": "😡",
+  "emoji_2": "🤬",
   "logchannel": "ايدي روم السجلات",
   "only": false,
   "onlyChannel":"ايدي الروم في حالة تفعيل وضع only"
